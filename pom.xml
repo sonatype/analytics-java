@@ -10,25 +10,32 @@
   <groupId>com.github.segmentio</groupId>
   <artifactId>analytics</artifactId>
   <description>The analytics API you've always wanted.</description>
-  <!--  IMPORTANT: DON'T FORGET TO UPDATE Analytics.VERSION EVERYTIME !!! -->
-  <version>1.0.1-SNAPSHOT</version>
+  <version>1.0.1-SONATYPE-1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>analytics</name>
   <url>https://github.com/segmentio/analytics-java/tree/master</url>
 
    <scm>
+    <connection>scm:git:git@github.com:sonatype/analytics-java.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com:sonatype/analytics-java.git</developerConnection>
+    <url>https://github.com/sonatype/analytics-java</url>
+    <!--
     <connection>scm:git:https://github.com/segmentio/analytics-java.git</connection>
     <developerConnection>scm:git:https://github.com/segmentio/analytics-java.git</developerConnection>
-    <url>https://github.com/segmentio/analytics-java.git</url>
+    <url>https://github.com/segmentio/analytics-java.git</url> 
+    -->
    </scm>
 
  <distributionManagement>
     <repository>
-      <id>sonatype-nexus-staging</id>
-      <name>Nexus Staging Repository</name>
-      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+      <id>${sonatype-release-id}</id>
+      <url>${sonatype-release-url}</url>
     </repository>
+    <snapshotRepository>
+      <id>${sonatype-snapshot-id}</id>
+      <url>${sonatype-snapshot-url}</url>
+    </snapshotRepository>
   </distributionManagement>
 
   <licenses>
@@ -41,6 +48,10 @@
 
   <properties> 
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <sonatype-release-id>sonatype-commercial</sonatype-release-id>
+    <sonatype-release-url>https://repository.sonatype.org/service/local/staging/deploy/maven2</sonatype-release-url>
+    <sonatype-snapshot-id>sonatype-commercial</sonatype-snapshot-id>
+    <sonatype-snapshot-url>https://repository.sonatype.org/content/repositories/sonatype-internal-snapshots</sonatype-snapshot-url>
   </properties> 
 
   <developers>
