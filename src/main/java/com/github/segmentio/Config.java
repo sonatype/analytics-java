@@ -1,5 +1,7 @@
 package com.github.segmentio;
 
+import org.apache.http.HttpHost;
+
 import org.apache.commons.lang3.StringUtils;
 
 
@@ -35,6 +37,11 @@ public class Config {
 	 */
 	
 	private int backoff;
+	
+	/**
+	 * A proxy to route all requests through.
+	 */
+	private HttpHost proxy;
 	
 	/**
 	 * Creates a default options
@@ -78,6 +85,10 @@ public class Config {
 
 	public int getBackoff() {
 		return backoff;
+	}
+	
+	public HttpHost getProxy() {
+	  return proxy;
 	}
 	
 	/**
@@ -143,5 +154,14 @@ public class Config {
 		
 		this.backoff = backoff;
 		return this;
+	}
+	
+	/**
+	 * Sets a proxy to route all requests through.
+	 * @param proxy The proxy to route requests through.
+	 */
+	public Config setProxy(HttpHost proxy) {
+	  this.proxy = proxy;
+	  return this;
 	}
 }
