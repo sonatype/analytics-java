@@ -11,7 +11,7 @@
   <groupId>com.github.segmentio</groupId>
   <artifactId>analytics</artifactId>
   <description>The analytics API you've always wanted.</description>
-  <version>1.0.1-SONATYPE-1-SNAPSHOT</version>
+  <version>1.0.1-SONATYPE-1</version>
   <packaging>jar</packaging>
 
   <name>analytics</name>
@@ -26,7 +26,8 @@
     <developerConnection>scm:git:https://github.com/segmentio/analytics-java.git</developerConnection>
     <url>https://github.com/segmentio/analytics-java.git</url> 
     -->
-   </scm>
+     <tag>analytics-1.0.1-SONATYPE-1</tag>
+  </scm>
 
   <licenses>
     <license>
