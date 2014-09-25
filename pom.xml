@@ -2,9 +2,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.sonatype.oss</groupId>
-    <artifactId>oss-parent</artifactId>
-    <version>7</version>
+    <groupId>com.sonatype.buildsupport</groupId>
+    <artifactId>private-parent</artifactId>
+    <version>6</version>
+    <relativePath />
   </parent>
 
   <groupId>com.github.segmentio</groupId>
@@ -27,17 +28,6 @@
     -->
    </scm>
 
- <distributionManagement>
-    <repository>
-      <id>${sonatype-release-id}</id>
-      <url>${sonatype-release-url}</url>
-    </repository>
-    <snapshotRepository>
-      <id>${sonatype-snapshot-id}</id>
-      <url>${sonatype-snapshot-url}</url>
-    </snapshotRepository>
-  </distributionManagement>
-
   <licenses>
     <license>
       <name>The MIT License</name>
@@ -48,10 +38,6 @@
 
   <properties> 
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <sonatype-release-id>sonatype-commercial</sonatype-release-id>
-    <sonatype-release-url>https://repository.sonatype.org/service/local/staging/deploy/maven2</sonatype-release-url>
-    <sonatype-snapshot-id>sonatype-commercial</sonatype-snapshot-id>
-    <sonatype-snapshot-url>https://repository.sonatype.org/content/repositories/sonatype-internal-snapshots</sonatype-snapshot-url>
   </properties> 
 
   <developers>
@@ -128,7 +114,6 @@
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-surefire-plugin</artifactId>
-            <version>2.16</version>
             <configuration>
                 <systemPropertyVariables>
                     <org.slf4j.simpleLogger.logFile>System.out</org.slf4j.simpleLogger.logFile>
